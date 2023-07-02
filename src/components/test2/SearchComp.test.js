@@ -8,5 +8,5 @@ test('testing input search bar',()=>{
     const display = screen.getByTestId('display')
     expect(display).not.toHaveTextContent('Vrushal')
     fireEvent.change(screen.getByRole('textbox'),{'target':{'value':'Vrushal'}})
-    expect(display).toHaveTextContent(/Searches for Vrushal/)
+    expect(display).toHaveTextContent(/Searches for Vrushal/i)
 })
